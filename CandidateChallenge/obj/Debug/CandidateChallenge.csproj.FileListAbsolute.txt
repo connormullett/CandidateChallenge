@@ -1,0 +1,7 @@
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\bin\Debug\CandidateChallenge.exe.config
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\bin\Debug\CandidateChallenge.exe
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\bin\Debug\CandidateChallenge.pdb
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\obj\Debug\CandidateChallenge.csprojAssemblyReference.cache
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\obj\Debug\CandidateChallenge.csproj.CoreCompileInputs.cache
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\obj\Debug\CandidateChallenge.exe
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateChallenge\obj\Debug\CandidateChallenge.pdb
