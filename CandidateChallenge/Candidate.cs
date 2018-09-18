@@ -2,7 +2,7 @@
 
 namespace CandidateChallenge
 {
-	internal class Candidate
+	public class Candidate
 	{
 		public string FirstName { get; set; }
 

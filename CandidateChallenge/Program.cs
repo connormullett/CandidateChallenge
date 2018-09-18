@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CandidateChallenge
 {
-	class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{
-			var program = new ProgramUI();
+			var program = new ProgramUI(new RealConsole());
 			program.Run();
 		}
 	}

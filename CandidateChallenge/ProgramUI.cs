@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace CandidateChallenge
 {
-	class ProgramUI
+	public class ProgramUI
 	{
-		readonly CandidateRepository _repo = new CandidateRepository();
+		public CandidateRepository _repo;
+		private readonly IConsole _console;
+
+		public ProgramUI(IConsole console)
+		{
+			_console = console;
+			_repo = new CandidateRepository();
+		}
 
 		public void Run()
 		{
@@ -17,16 +24,16 @@ namespace CandidateChallenge
 
 		private void InitialPrompt()
 		{
-			Console.Clear();
-			Console.WriteLine("1. Add Candidate\n2. Delete Candidate\n3. See Candidates\n4. Exit");
-			string inputStr = Console.ReadLine();
+			_console.Clear();
+			_console.WriteLine("1. Add Candidate\n2. Delete Candidate\n3. See Candidates\n4. Exit");
+			string inputStr = _console.ReadLine();
 
 			bool inputBl = int.TryParse(inputStr, out int input);
 			if(input < 1 || input > 4 || inputBl == false)
 			{
-				Console.Clear();
-				Console.WriteLine("Invalid Answer");
-				Console.ReadKey();
+				_console.Clear();
+				_console.WriteLine("Invalid Answer");
+				_console.ReadKey();
 				InitialPrompt();
 			}
 
@@ -36,7 +43,7 @@ namespace CandidateChallenge
 					AddCandidate();
 					break;
 				case 2:
-					DeleteCandidate();
+					RemoveCandidate();
 					break;
 				case 3:
 					SeeCandidates();
@@ -48,22 +55,22 @@ namespace CandidateChallenge
 
 		private void AddCandidate()
 		{
-			Console.Clear();
-			Console.WriteLine("Enter Candidate First Name: ");
-			var firstName = Console.ReadLine();
+			_console.Clear();
+			_console.WriteLine("Enter Candidate First Name: ");
+			var firstName = _console.ReadLine();
 
-			Console.WriteLine("Enter Candidate Last Name: ");
-			var lastName = Console.ReadLine();
+			_console.WriteLine("Enter Candidate Last Name: ");
+			var lastName = _console.ReadLine();
 
-			Console.WriteLine("Enter Years of Experience: ");
-			var yearsCoding = int.Parse(Console.ReadLine());
+			_console.WriteLine("Enter Years of Experience: ");
+			var yearsCoding = int.Parse(_console.ReadLine());
 
-			Console.WriteLine("How many languages does the candidate know: ");
-			var numLanguages = int.Parse(Console.ReadLine());
+			_console.WriteLine("How many languages does the candidate know: ");
+			var numLanguages = int.Parse(_console.ReadLine());
 			var languages = AddLanguages(numLanguages);
 
-			Console.WriteLine("Enter candidates expected salary: ");
-			var expectedSalary = int.Parse(Console.ReadLine());
+			_console.WriteLine("Enter candidates expected salary: ");
+			var expectedSalary = int.Parse(_console.ReadLine());
 
 			_repo.CreateCandidate(new Candidate()
 				{
@@ -74,9 +81,9 @@ namespace CandidateChallenge
 					ExpectedSalary = expectedSalary
 				});
 
-			Console.Clear();
-			Console.WriteLine("Candidate Created");
-			Console.ReadKey();
+			_console.Clear();
+			_console.WriteLine("Candidate Created");
+			_console.ReadKey();
 			InitialPrompt();
 		}
 
@@ -86,51 +93,54 @@ namespace CandidateChallenge
 
 			for (int i = 0; i < num; i++)
 			{
-				Console.WriteLine("Enter Language: ");
-				list.Add(Console.ReadLine());
+				_console.WriteLine("Enter Language: ");
+				list.Add(_console.ReadLine());
 			}
 
 			return list;
 		}
 
-		private void DeleteCandidate()
+		private void RemoveCandidate()
 		{
-			Console.Clear();
-			Console.WriteLine("Enter Last name of candidate to delete: ");
-			if(_repo.DeleteCandidate(Console.ReadLine()) == true)
+			_console.Clear();
+
+			for(int i = 1; i < _repo.Getlist().Count; i++)
 			{
-				Console.WriteLine("Candidate deleted");
-			}
-			else
-			{
-				Console.WriteLine("Candidate does not exist");
+				Console.WriteLine($"{i}. {_repo.Getlist()[i].LastName} {_repo.Getlist()[i].FirstName}");
 			}
 
-			Console.ReadKey();
+			_console.WriteLine("Enter Candidates number to delete: ");
+			var num = int.Parse(_console.ReadLine());
+
+			_repo.DeleteCandidate(num - 1);
+			_console.WriteLine("Candidate deleted");
+			
+
+			_console.ReadKey();
 			InitialPrompt();
 		}
 
 		private void SeeCandidates()
 		{
-			Console.Clear();
+			_console.Clear();
 			if(_repo.Getlist() == null)
 			{
-				Console.WriteLine("No candidates exist");
-				Console.ReadKey();
+				_console.WriteLine("No candidates exist");
+				_console.ReadKey();
 				InitialPrompt();
 			}
 
 			foreach(var c in _repo.Getlist())
 			{
-				Console.WriteLine($"{c.FirstName} {c.LastName}\n{c.YearsCoding}");
+				_console.WriteLine($"{c.FirstName} {c.LastName}\n{c.YearsCoding}");
 				foreach(var l in c.Languages)
 				{
-					Console.WriteLine(l);
+					_console.WriteLine(l);
 				}
-				Console.WriteLine(c.ExpectedSalary);
+				_console.WriteLine(c.ExpectedSalary.ToString());
 			}
 
-			Console.ReadKey();
+			_console.ReadKey();
 			InitialPrompt();
 		}
 	}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CandidateChallenge
 {
-	class CandidateRepository
+	public class CandidateRepository
 	{
 		private readonly List<Candidate> _candidates = new List<Candidate>();
 
@@ -20,16 +20,9 @@ namespace CandidateChallenge
 			return _candidates;
 		}
 
-		public bool DeleteCandidate(string name)
+		public void DeleteCandidate(int i)
 		{
-			var entity = _candidates.Single(x => x.LastName == name);
-
-			if (entity == null) return false;
-			else
-			{
-				_candidates.Remove(entity);
-				return true;
-			}
+			_candidates.Remove(_candidates[i]);
 		}
 	}
 }

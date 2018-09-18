@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateRepository.cs" />
+    <Compile Include="IConsole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealConsole.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

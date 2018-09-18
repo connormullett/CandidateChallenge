@@ -1,0 +1,17 @@
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\CandidateTests.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\CandidateTests.pdb
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\CandidateChallenge.exe
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\CandidateChallenge.pdb
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\CandidateChallenge.exe.config
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\obj\Debug\CandidateTests.csprojAssemblyReference.cache
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\obj\Debug\CandidateTests.csproj.CoreCompileInputs.cache
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\obj\Debug\CandidateTests.csproj.CopyComplete
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\obj\Debug\CandidateTests.dll
+C:\Users\Connor Mullett\Desktop\DotNetProjects\Challenges\CandidateChallenge\CandidateTests\obj\Debug\CandidateTests.pdb
